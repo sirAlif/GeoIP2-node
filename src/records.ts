@@ -245,6 +245,8 @@ export interface TraitsRecord {
    * the Enterprise database.
    */
   readonly domain?: string;
+
+  readonly tags?: string;
   /**
    * The IP address that the data in the model is for. If you performed a "me"
    * lookup against the web service, this will be the externally routable IP

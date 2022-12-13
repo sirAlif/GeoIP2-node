@@ -7,6 +7,7 @@ import Domain from './Domain';
 import Enterprise from './Enterprise';
 import Insights from './Insights';
 import Isp from './Isp';
+import Tags from './Tags';
 
 export {
   AnonymousIP,
@@ -18,4 +19,5 @@ export {
   Enterprise,
   Insights,
   Isp,
+  Tags,
 };

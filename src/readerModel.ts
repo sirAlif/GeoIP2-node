@@ -137,6 +137,19 @@ export default class ReaderModel {
     );
   }
 
+  /**
+   * Returns the Tags db data for an IP address
+   *
+   * @param ipAddress The IP Address you want to query the Tags db with
+   *
+   * @throws {BadMethodCallError} Throws an error when the DB doesn't support Tags queries
+   * @throws {AddressNotFoundError} Throws an error when the IP address isn't found in the database
+   * @throws {ValueError} Throws an error when the IP address isn't valid
+   */
+  public tags(ipAddress: string): models.Tags {
+    return this.modelFor(models.Tags, 'Tags', ipAddress, 'tags()');
+  }
+
   private getRecord(dbType: string, ipAddress: string, fnName: string) {
     const metaDbType = this.mmdbReader.metadata.databaseType;
 
